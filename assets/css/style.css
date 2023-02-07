@@ -1,0 +1,32 @@
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+
+
+
+
+.cover{
+    max-width: 100%;
+    min-height: 1200px;
+    display: flex;
+    flex-direction: column;
+   
+    
+}
+
+.cover h1{
+    color: white;
+    font-family: 'Syne';
+    font-size: 75px;
+    margin-top: 100px;
+    margin-left: 200px;
+    padding: 10px;
+  
+}
+
+.cover p{
+    font-family: 'Space Grotesk';
+    color: white;
+    font-size: 25px;
+    margin-left: 200px;
+    padding: 10px;
+    
+}

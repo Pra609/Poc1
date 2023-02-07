@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html   xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Electricity Billing System</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/fonts/stylesheet.css" rel="stylesheet">
+  </head>
+<body>
+<nav class="navbar navbar-inverse">
+<!-- nav bar for the index page -->
+  <div class="container">
+    <!-- Brand and toggle get grouped for better  display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">BILLING</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+       <li><a href="#" class="active">GALLERY</a></li>
+   
+        <li><a th:href="@{/signin}">LOGIN</a></li>
+         <li><a th:href="@{/register}">REGISTER</a></li>
+       </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<section>
+
+</section>
+ 
+<div class="cover" style="background: url(assets/images/253796.jpg);">
+
+    <h1>Welcome to Travel Diary by Ciara</h1>
+    <p>I consider myself to be a great travel blogger, but there
+        <br>
+         are so many others with unique perspectives and stories. 
+         <br>
+          As a 29-year old woman,I have covered so many different place 
+          <br>
+          and here are some amazing pics from those trips.
+          <br>You can checkout by clicking on Gallery above.
+          <br>You can signup for more.</p>
+
+
+	
+</div>
+
+
+
+</body>
+</html>
