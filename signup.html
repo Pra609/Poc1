@@ -16,25 +16,22 @@
 
 <body>
 	
-		<div th:if="${session.message}" th:classappend="${session.message.type}" class="alert" role="alert">
-  	               	     <p class="text-center" th:text="${session.message.content}"></p>  	               	     
-  	               	     <th:block th:text="${#session.removeAttribute('message')}"></th:block>
-		             </div>
+		
 	             
 <section>
 
 	
 
-<div class="container">
+<div class="register">
 
- <div >
+
     
     		
         <div class="row">
             <div class="col-md-6 col-md-offset-3" >
            
                 <h1 style="text-align: center;color:blue;">REGISTER </h1><hr>
-                <form class="form-horizontal" id="addCustomer" name="addCustomer" method="post"  onsubmit=" validateForm()"  >
+                <form class="form-horizontal"  onsubmit="return signup()">
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="name">Name:</label>
                         <div class="col-sm-8">
@@ -76,7 +73,7 @@
                     
                     <div class="form-group">        
                       <div class="col-sm-offset-3 col-sm-8">
-                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                        <button type="submit"  class="btn btn-primary btn-block"   >Submit</button>
                         <button type="reset" class="btn btn-primary btn-block">Reset</button>
                          
                       </div>
@@ -90,6 +87,8 @@
         </div>
 
     </div>
+
+    <script src="assets/js/script.js"></script>
  
 </section>
 
