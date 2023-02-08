@@ -1,42 +1,29 @@
 
-function submitForm(){
-	document.getElementById("addCustomer").submit(); 
-	console.log("this frame");
+ function printError(elemId, hintMsg) {
+    document.getElementById(elemId).innerHTML = hintMsg;
 }
 
-// Defining a function to validate form 
-function validateForm() {
-    // Retrieving the values of form elements 
-    var name = document.addCustomer.name.value;
+
+function signup(){
+
     
-    var email = document.addCustomer.email.value;
-    var password = document.addCustomer.password.value;
-  	//var role = document.addCustomer.role.value;
-  	var contact = document.addCustomer.contact.value;
+ 
+    var email =document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+   
    
 	// Defining error variables with a default value
-    var nameErr =true;
+    
    
     var emailErr = true;
-    var contactErr = true;
+    
     var passwordErr = true;
    
-    console.log(name)
-    
+   
        console.log(email)
         console.log(password)
     // Validate name
-    if(name == "") {
-        printError("nameErr", "Please enter your name");
-    } else {
-        var regex = /^[a-zA-Z\s]+$/;                
-        if(regex.test(name) === false) {
-            printError("nameErr", "Please enter a valid name");
-        } else {
-            printError("nameErr", "");
-            nameErr = false;
-        }
-    }
    
     
     // Validate email address
@@ -53,18 +40,7 @@ function validateForm() {
         }
     }
     
-    // Validate contact number
-    if(contact == "") {
-        printError("contactErr", "Please enter your contact number");
-    } else {
-        var regex = /^[1-9]\d{9}$/;
-        if(regex.test(contact) === false) {
-            printError("contactErr", "Please enter a valid 10 digit contact number");
-        } else{
-            printError("contactErr", "");
-            contactErr = false;
-        }
-    }
+   
     
 //    // Validate role
 //    if(role == "Select") {
@@ -92,27 +68,40 @@ function validateForm() {
     
     
     // Prevent the form from being submitted if there are any errors
-    if((nameErr || emailErr || contactErr || passwordErr) == true) {
+    if((emailErr || passwordErr) == true) {
        console.log(nameErr)       
        return false;
     } else {
         // Creating a string from input data for preview
         var dataPreview = "You've entered the following details: \n" +
-                          " Name: " + name + "\n" +
+                          
                            "Email Address: " + email + "\n" +
-                          "Contact Number: " + contact + "\n" ;
+                        
+            
                          
              
-       console.log(dataPreview)
+       console.log(dataPreview);
         // Display input data in a dialog box before submitting the form
      
-	   submitForm()
+	   
 	   alert(dataPreview);
-	   window.location = "/signin";
+	   
 	   validated =true;
-	   return true;
-      
-    }
+       if(validated=true){
+        
+        localStorage.setItem("email",email);
+        localStorage.setItem("password",password);
     
-};
+        console.log(name+".....");
+    
+    }
+	  
+      
+    return true;       
+ 
+}
 
+    
+
+  
+};
