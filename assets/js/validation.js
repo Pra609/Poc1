@@ -1,18 +1,18 @@
-var validated=false
- function printError(elemId, hintMsg) {
-    document.getElementById(elemId).innerHTML = hintMsg;
+
+function submitForm(){
+	document.getElementById("addCustomer").submit(); 
+	console.log("this frame");
 }
 
-
-function signup(){
-
+// Defining a function to validate form 
+function validateForm() {
+    // Retrieving the values of form elements 
+    var name = document.addCustomer.name.value;
     
-    var name = document.getElementById("name").value;
-    var contact = document.getElementById("contact").value;
-    var email =document.getElementById("email").value;
-    var password = document.getElementById("password").value;
-
-   
+    var email = document.addCustomer.email.value;
+    var password = document.addCustomer.password.value;
+  	//var role = document.addCustomer.role.value;
+  	var contact = document.addCustomer.contact.value;
    
 	// Defining error variables with a default value
     var nameErr =true;
@@ -101,33 +101,18 @@ function signup(){
                           " Name: " + name + "\n" +
                            "Email Address: " + email + "\n" +
                           "Contact Number: " + contact + "\n" ;
-
-            
                          
              
-       console.log(dataPreview);
+       console.log(dataPreview)
         // Display input data in a dialog box before submitting the form
      
-	   
+	   submitForm()
 	   alert(dataPreview);
-	   
+	   window.location = "/signin";
 	   validated =true;
-       if(validated=true){
-        localStorage.setItem("name",name);
-        localStorage.setItem("contact",contact);
-        localStorage.setItem("email",email);
-        localStorage.setItem("password",password);
-    
-        console.log(name+".....");
-    
-    }
-	  
+	   return true;
       
-    return true;       
- 
-}
-
+    }
     
-
-  
 };
+

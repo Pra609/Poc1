@@ -5,7 +5,7 @@
 
 .cover{
     max-width: 100%;
-    min-height: 1200px;
+    min-height: 1000px;
     display: flex;
     flex-direction: column;
    
@@ -30,3 +30,28 @@
     padding: 10px;
     
 }
+
+.sec1{
+    display: flex;
+    justify-content: center;
+}
+
+.row{
+    width: 500px;
+    text-align: right;
+
+}
+/* ------------------------------------------------------------- */
+
+
+footer {
+    background-color: black;
+   display: flex;
+   justify-content: center;
+}
+
+footer p{
+    color: white;
+    font-size: 50px;
+}
+
