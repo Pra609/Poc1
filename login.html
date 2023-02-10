@@ -5,26 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link href="assets/css/login.css" rel="stylesheet">
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<link href="assets/css/login.css" rel="stylesheet">
 
 </head>
 <body>
     <div class="container">
         <div class="screen">
             <div class="screen__content">
-                <form class="login" onsubmit="return login()">
+                <form class="login" method="get" onsubmit="return signup()">
                     <div class="login__field">
                         <i class="login__icon fas fa-user"></i>
-                        <input type="text" class="login__input" placeholder="Email" id="email">
+                        <input type="text email" class="login__input" placeholder="Email" id="email" name="email">
                         <div class="error" id="emailErr"></div>
                     </div>
                     <div class="login__field">
                         <i class="login__icon fas fa-lock"></i>
-                        <input type="password" class="login__input" placeholder="Password" id="password">
+                        <input type="password" class="login__input" placeholder="Password" id="password"  name="password">
                         <div class="error" id="passwordErr"></div>
                     </div>
                     <button class="button login__submit">
-                        <span class="button__text">Log In Now</span>
+                        <span class="button__text"  >Log In Now</span>
                         <i class="button__icon fas fa-chevron-right"></i>
                     </button>				
                 </form>
@@ -38,6 +47,6 @@
             </div>		
         </div>
     </div>
-    <script src="assets/js/login.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
