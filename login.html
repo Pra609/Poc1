@@ -21,15 +21,15 @@
     <div class="container">
         <div class="screen">
             <div class="screen__content">
-                <form class="login" method="get" onsubmit="return signup()">
+                <form class="login" method="get" action="gallery.html" onsubmit="return login()" >
                     <div class="login__field">
                         <i class="login__icon fas fa-user"></i>
-                        <input type="text email" class="login__input" placeholder="Email" id="email" name="email">
+                        <input type="text email" class="login__input" placeholder="Email" id="email" name="email" required>
                         <div class="error" id="emailErr"></div>
                     </div>
                     <div class="login__field">
                         <i class="login__icon fas fa-lock"></i>
-                        <input type="password" class="login__input" placeholder="Password" id="password"  name="password">
+                        <input type="password" class="login__input" placeholder="Password" id="password"  name="password" required>
                         <div class="error" id="passwordErr"></div>
                     </div>
                     <button class="button login__submit">
@@ -47,6 +47,6 @@
             </div>		
         </div>
     </div>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/login.js"></script>
 </body>
 </html>

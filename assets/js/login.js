@@ -19,10 +19,14 @@ function login(){
   
       console.log(loginValidated+"loginvalidated");
 
-
-   if(loginValidated.match(true)){
-    alert("login successfull");
-    window.location = "gallery.html";
+     
+   if(loginValidated==true){
+   alert("login success")
+ 
+  
+   }else{
+    alert("password or email is incorrect")
+    return false;
    }
 
    
